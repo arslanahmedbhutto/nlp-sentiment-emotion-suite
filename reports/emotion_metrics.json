@@ -1,0 +1,75 @@
+{
+  "dataset": "Emotions dataset for NLP (train/val/test)",
+  "n_train": 16000,
+  "n_val": 2000,
+  "n_test": 2000,
+  "selection": "classical models chosen by macro-F1 on val",
+  "best_classical": "Linear SVM",
+  "trained_at": "2026-10-07T18:06:18+00:00",
+  "results": [
+    {
+      "Model": "Logistic Regression",
+      "Type": "TF-IDF",
+      "Val Macro F1": 0.8583968932752438,
+      "Accuracy": 0.8825,
+      "Macro F1": 0.8370284619256777,
+      "Weighted F1": 0.8831938751537215,
+      "per_class_f1": {
+        "anger": 0.8812949640287769,
+        "fear": 0.8465116279069768,
+        "joy": 0.909221902017291,
+        "love": 0.7701492537313432,
+        "sadness": 0.9193408499566349,
+        "surprise": 0.6956521739130435
+      }
+    },
+    {
+      "Model": "BiLSTM + Attention",
+      "Type": "Deep learning",
+      "Val Macro F1": 0.8774930035060938,
+      "Accuracy": 0.8765,
+      "Macro F1": 0.8336919617626096,
+      "Weighted F1": 0.8779600953099398,
+      "per_class_f1": {
+        "anger": 0.8802946593001841,
+        "fear": 0.8532110091743119,
+        "joy": 0.8976608187134503,
+        "love": 0.7888888888888889,
+        "sadness": 0.9106678230702515,
+        "surprise": 0.6714285714285714
+      }
+    },
+    {
+      "Model": "Linear SVM",
+      "Type": "TF-IDF",
+      "Val Macro F1": 0.8709518295751365,
+      "Accuracy": 0.884,
+      "Macro F1": 0.8291452776078777,
+      "Weighted F1": 0.8837642292812116,
+      "per_class_f1": {
+        "anger": 0.8860759493670886,
+        "fear": 0.863013698630137,
+        "joy": 0.910394265232975,
+        "love": 0.7654320987654321,
+        "sadness": 0.9200343938091143,
+        "surprise": 0.6299212598425197
+      }
+    },
+    {
+      "Model": "Naive Bayes",
+      "Type": "TF-IDF",
+      "Val Macro F1": 0.649798002383362,
+      "Accuracy": 0.7605,
+      "Macro F1": 0.6300996641267194,
+      "Weighted F1": 0.7412718025816885,
+      "per_class_f1": {
+        "anger": 0.7161016949152542,
+        "fear": 0.7116883116883117,
+        "joy": 0.8133669609079445,
+        "love": 0.45045045045045046,
+        "sadness": 0.8105095541401274,
+        "surprise": 0.27848101265822783
+      }
+    }
+  ]
+}

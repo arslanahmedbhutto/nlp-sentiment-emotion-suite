@@ -1,0 +1,10 @@
+# IMDb CSV is 66 MB: download it (see README) instead of committing it
+data/imdb/*.csv
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
