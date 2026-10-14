@@ -65,6 +65,18 @@ The BiLSTM's attention weights turned out to be almost uniform (about 0.12–0.1
 
 The model still classifies well, because the BiLSTM states carry the signal, but the attention weights don't explain anything. The app therefore explains BiLSTM predictions by **occlusion** instead: remove one word at a time and measure the drop in confidence. For *"I keep hearing noises outside and I feel scared…"*, removing `scared` drops P(fear) by 0.995, and every other word scores below 0.002.
 
+### See also: fine-tuned Transformers on the same dataset
+
+My published paper fine-tunes four Transformers on this same emotion dataset and test split: [**Emotion-Detection-Transformers**](https://github.com/arslanahmedbhutto/Emotion-Detection-Transformers) (*IJTSM*, Vol. 6, Issue 1, 2025).
+
+| Approach | Repo | Test accuracy | Macro F1 |
+|---|---|---|---|
+| TF-IDF + Logistic Regression | this repo | 88.2% | 0.84 |
+| BiLSTM + Attention | this repo | 87.6% | 0.83 |
+| Fine-tuned XLNet / RoBERTa / DistilBERT / BigBird | [Emotion-Detection-Transformers](https://github.com/arslanahmedbhutto/Emotion-Detection-Transformers) | 92.95–93.20% | 0.88–0.89 |
+
+Contextual models gain about 5 points of accuracy and 0.05 macro-F1 over the best classical model, at the cost of GPU training and 250–500 MB per model.
+
 ## How explanations work
 
 | Model | Explanation |
@@ -132,7 +144,7 @@ The BiLSTM tests are skipped automatically when TensorFlow isn't installed (as i
 
 ## Roadmap
 
-- [ ] Fine-tune DistilBERT and add it as a third model type (should fix "not bad")
+- [ ] Add a fine-tuned Transformer to the app (the [emotion models from my paper](https://github.com/arslanahmedbhutto/Emotion-Detection-Transformers) for emotion; a DistilBERT for sentiment, which should fix "not bad")
 - [ ] Retrain the BiLSTM with `mask_zero=True` and without stop-word removal
 - [ ] Deploy the app on Streamlit Community Cloud
 
