@@ -9,7 +9,7 @@ Two text-classification tasks, classical machine learning vs deep learning, serv
 
 | Sentiment | Emotion (BiLSTM) |
 |---|---|
-| ![Sentiment tab](docs/screenshots/sentiment.jpg) | ![Emotion tab](docs/screenshots/emotion.jpg) |
+| ![Sentiment tab](docs/screenshots/sentiment.png) | ![Emotion tab](docs/screenshots/emotion.png) |
 
 ## Results
 
